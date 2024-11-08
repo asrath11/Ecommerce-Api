@@ -1,0 +1,182 @@
+[
+  {
+    "name": "Wireless Bluetooth Headphones",
+    "category": "Electronics",
+    "price": 4199,
+    "stock": 120,
+    "description": "Comfortable wireless headphones with noise cancellation.",
+    "image": "https://example.com/images/headphones.jpg",
+    "rating": 4.5
+  },
+  {
+    "name": "Smartwatch with Health Monitoring",
+    "category": "Electronics",
+    "price": 8399,
+    "stock": 75,
+    "description": "Feature-rich smartwatch with heart rate and sleep tracking.",
+    "image": "https://example.com/images/smartwatch.jpg",
+    "rating": 4.2
+  },
+  {
+    "name": "4K Ultra HD TV",
+    "category": "Electronics",
+    "price": 41999,
+    "stock": 20,
+    "description": "Ultra HD smart TV with high dynamic range and vibrant colors.",
+    "image": "https://example.com/images/tv.jpg",
+    "rating": 4.7
+  },
+  {
+    "name": "Stainless Steel Water Bottle",
+    "category": "Home & Kitchen",
+    "price": 1699,
+    "stock": 200,
+    "description": "Eco-friendly, reusable, and keeps drinks cold for hours.",
+    "image": "https://example.com/images/water_bottle.jpg",
+    "rating": 4.3
+  },
+  {
+    "name": "Gaming Mouse",
+    "category": "Electronics",
+    "price": 2499,
+    "stock": 150,
+    "description": "High-precision gaming mouse with customizable RGB lighting.",
+    "image": "https://example.com/images/gaming_mouse.jpg",
+    "rating": 4.6
+  },
+  {
+    "name": "Yoga Mat",
+    "category": "Sports",
+    "price": 2099,
+    "stock": 100,
+    "description": "Non-slip, extra thick yoga mat for comfortable exercise.",
+    "image": "https://example.com/images/yoga_mat.jpg",
+    "rating": 4.5
+  },
+  {
+    "name": "Ceramic Coffee Mug",
+    "category": "Home & Kitchen",
+    "price": 1099,
+    "stock": 300,
+    "description": "Microwave-safe coffee mug with a comfortable grip.",
+    "image": "https://example.com/images/coffee_mug.jpg",
+    "rating": 4.1
+  },
+  {
+    "name": "Portable Power Bank",
+    "category": "Electronics",
+    "price": 2999,
+    "stock": 80,
+    "description": "Compact and fast-charging power bank with 10000mAh capacity.",
+    "image": "https://example.com/images/power_bank.jpg",
+    "rating": 4.4
+  },
+  {
+    "name": "Wireless Keyboard",
+    "category": "Electronics",
+    "price": 3399,
+    "stock": 65,
+    "description": "Slim and ergonomic wireless keyboard with quiet keys.",
+    "image": "https://example.com/images/keyboard.jpg",
+    "rating": 4.3
+  },
+  {
+    "name": "Electric Kettle",
+    "category": "Home & Kitchen",
+    "price": 2499,
+    "stock": 50,
+    "description": "Quick-boiling electric kettle with auto shut-off feature.",
+    "image": "https://example.com/images/kettle.jpg",
+    "rating": 4.2
+  },
+  {
+    "name": "Adjustable Dumbbell Set",
+    "category": "Sports",
+    "price": 4999,
+    "stock": 30,
+    "description": "Adjustable weights, perfect for home workouts.",
+    "image": "https://example.com/images/dumbbell.jpg",
+    "rating": 4.6
+  },
+  {
+    "name": "Cordless Vacuum Cleaner",
+    "category": "Home & Kitchen",
+    "price": 10999,
+    "stock": 45,
+    "description": "Lightweight and powerful vacuum cleaner for all floor types.",
+    "image": "https://example.com/images/vacuum.jpg",
+    "rating": 4.4
+  },
+  {
+    "name": "Fitness Tracker",
+    "category": "Electronics",
+    "price": 4199,
+    "stock": 100,
+    "description": "Water-resistant fitness tracker with multiple sport modes.",
+    "image": "https://example.com/images/fitness_tracker.jpg",
+    "rating": 4.3
+  },
+  {
+    "name": "Laptop Stand",
+    "category": "Accessories",
+    "price": 2399,
+    "stock": 120,
+    "description": "Adjustable laptop stand for better posture and cooling.",
+    "image": "https://example.com/images/laptop_stand.jpg",
+    "rating": 4.5
+  },
+  {
+    "name": "Bluetooth Speaker",
+    "category": "Electronics",
+    "price": 3399,
+    "stock": 90,
+    "description": "Portable Bluetooth speaker with deep bass and long battery life.",
+    "image": "https://example.com/images/speaker.jpg",
+    "rating": 4.6
+  },
+  {
+    "name": "Cotton Bed Sheets Set",
+    "category": "Home & Kitchen",
+    "price": 5899,
+    "stock": 25,
+    "description": "Soft, breathable bed sheets for a comfortable sleep.",
+    "image": "https://example.com/images/bed_sheets.jpg",
+    "rating": 4.4
+  },
+  {
+    "name": "Stainless Steel Knife Set",
+    "category": "Home & Kitchen",
+    "price": 4199,
+    "stock": 40,
+    "description": "Sharp and durable knife set for all kitchen needs.",
+    "image": "https://example.com/images/knife_set.jpg",
+    "rating": 4.5
+  },
+  {
+    "name": "Running Shoes",
+    "category": "Sports",
+    "price": 6699,
+    "stock": 60,
+    "description": "Lightweight running shoes with cushioned support.",
+    "image": "https://example.com/images/running_shoes.jpg",
+    "rating": 4.4
+  },
+  {
+    "name": "Digital Air Fryer",
+    "category": "Home & Kitchen",
+    "price": 8399,
+    "stock": 30,
+    "description": "Healthy cooking with minimal oil, adjustable temperature control.",
+    "image": "https://example.com/images/air_fryer.jpg",
+    "rating": 4.5
+  },
+  {
+    "name": "Leather Wallet",
+    "category": "Accessories",
+    "price": 2099,
+    "stock": 85,
+    "description": "Slim and durable leather wallet with multiple card slots.",
+    "image": "https://example.com/images/wallet.jpg",
+    "rating": 4.3
+  }
+]
