@@ -14,7 +14,7 @@ To view Documentation Please read on this link https://documenter.getpostman.com
 
 Tech Stack
 
-Node.js with Express.js for server and routing
-MongoDB with Mongoose for database management
-JWT for secure, token-based authentication
+1)Node.js with Express.js for server and routing
+2)MongoDB with Mongoose for database management
+3)JWT for secure, token-based authentication
 
