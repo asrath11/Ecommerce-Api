@@ -54,5 +54,10 @@ exports.getMe = async (req, res, next) => {
         user: currentUser,
       },
     });
-  } catch (error) {}
+  } catch (error) {
+    res.status(500).json({
+      status: 'error',
+      message: error.message,
+    });
+  }
 };
