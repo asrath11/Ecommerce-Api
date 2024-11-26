@@ -1,13 +1,41 @@
+const crypto = require('crypto');
 const jwt = require('jsonwebtoken');
 const User = require('./../models/userModel');
 const dotenv = require('dotenv');
-
+const sendEmail = require('./../utilities/email');
 dotenv.config({ path: 'config.env' });
 
 // Helper function to create JWT token
-function createToken(id) {
+function signToken(id) {
   return jwt.sign({ id }, process.env.JWT_SECRET, {
     expiresIn: process.env.JWT_EXPIRY,
+  });
+}
+
+function createSendToken(user, statusCode, res) {
+  const token = signToken(user._id);
+
+  const cookieOptions = {
+    expires: new Date(
+      Date.now() + process.env.JWT_COOKIE_EXPIRES_IN * 24 * 60 * 60 * 1000
+    ),
+    httpOnly: true,
+  };
+  if (process.env.NODE_ENV === 'production') {
+    cookieOptions.secure = true; // Send cookie over HTTPS in production
+  }
+
+  res.cookie('jwt', token, cookieOptions);
+
+  // Remove password from the output
+  user.password = undefined;
+
+  res.status(statusCode).json({
+    status: 'success',
+    token,
+    data: {
+      user,
+    },
   });
 }
 
@@ -31,7 +59,7 @@ exports.signup = async function (req, res, next) {
     });
 
     // Create token
-    const token = createToken(user._id);
+    const token = createSendToken(user, 201, res);
 
     // Respond with token and user data
     res.status(201).json({
@@ -48,14 +76,12 @@ exports.signup = async function (req, res, next) {
 exports.login = async function (req, res, next) {
   try {
     const { email, password } = req.body;
-    console.log(email, password);
     // Validation: Ensure both email and password are provided
     if (!email || !password) {
       return next(new Error('Please provide both email and password'));
     }
     // Find user by email
     const user = await User.findOne({ email }).select('+password');
-    console.log(user);
     if (!user) {
       return next(new Error('User not found'));
     }
@@ -64,14 +90,8 @@ exports.login = async function (req, res, next) {
       return next(new Error('Incorrect password'));
     }
     // Create JWT token
-    console.log(user._id);
-    const token = createToken(user._id);
+    createSendToken(user, 201, res);
     // Send response with token and user data
-    res.status(200).json({
-      status: 'success',
-      token,
-      data: user,
-    });
   } catch (err) {
     return next(err);
   }
@@ -120,4 +140,61 @@ exports.restrictTo = (...roles) => {
     }
     next();
   };
+};
+
+exports.forgotPassword = async function (req, res, next) {
+  try {
+    const user = await User.findOne({ email: req.body.email });
+    if (!user) {
+      return next(new Error('There is no user with that email address'));
+    }
+    const resetToken = user.createPasswordResetToken();
+    await user.save({ validateBeforeSave: false });
+
+    const resetURL = `${req.protocol}://${req.get(
+      'host'
+    )}/api/v1/users/resetPassword/${resetToken}`;
+    const message = `Forgot your password? Submit a PATCH request with your new password and passwordConfirm to: ${resetURL}.\nIf you didn't request this, please ignore this email.`;
+    await sendEmail({
+      email: user.email,
+      subject: 'Your password reset token (valid for 10 minutes)',
+      message,
+    });
+    res.status(200).json({
+      status: 'success',
+      message: 'Message sent to email',
+    });
+  } catch (error) {
+    res.status(500).json({
+      status: 'fail',
+      message: error.message,
+    });
+  }
+};
+
+exports.resetPassword = async function (req, res, next) {
+  try {
+    const hashedToken = crypto
+      .createHash('sha256')
+      .update(req.params.token)
+      .digest('hex');
+    const user = await User.findOne({
+      passwordResetToken: hashedToken,
+      passwordResetExpires: { $gt: Date.now() },
+    });
+    if (!user) {
+      return next(new Error('Token is invalid or has expired'));
+    }
+    user.password = req.body.password;
+    user.passwordConfirm = req.body.passwordConfirm;
+    user.passwordResetToken = undefined; // Remove token
+    user.passwordResetExpires = undefined;
+    await user.save();
+    const token = createSendToken(user, 201, res);
+  } catch (error) {
+    res.status(500).json({
+      status: 'fail',
+      message: error.message,
+    });
+  }
 };
