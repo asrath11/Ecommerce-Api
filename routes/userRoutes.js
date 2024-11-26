@@ -11,6 +11,7 @@ router.patch('/resetpassword/:token', authController.resetPassword);
 
 // Protecting routes with the 'protect' middleware
 router.use(authController.protect); // Protect all routes below this line
+router.get('/me', userController.getMe);
 router.use(authController.restrictTo('admin')); // Protect all routes below this line
 
 // Protected Routes for Admins Only

@@ -44,3 +44,15 @@ exports.getUser = async (req, res, next) => {
     });
   }
 };
+
+exports.getMe = async (req, res, next) => {
+  try {
+    const currentUser = await User.findById(req.user.id);
+    res.status(200).json({
+      status: 'success',
+      data: {
+        user: currentUser,
+      },
+    });
+  } catch (error) {}
+};
