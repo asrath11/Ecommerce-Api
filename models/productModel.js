@@ -26,6 +26,9 @@ const productSchema = new mongoose.Schema({
   image: {
     type: String,
   },
+  reviews: {
+    type: String,
+  },
 });
 
 const product = mongoose.model('Product', productSchema);

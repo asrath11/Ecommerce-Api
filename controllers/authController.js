@@ -1,6 +1,7 @@
 const crypto = require('crypto');
 const jwt = require('jsonwebtoken');
 const User = require('./../models/userModel');
+const Cart = require('./../models/cartModel');
 const dotenv = require('dotenv');
 const sendEmail = require('./../utilities/email');
 dotenv.config({ path: 'config.env' });
@@ -60,12 +61,18 @@ exports.signup = async function (req, res, next) {
 
     // Create token
     const token = createSendToken(user, 201, res);
+    const cart = await Cart.create({
+      userId: user._id, // Associate the cart with the new user's ID
+    });
 
     // Respond with token and user data
     res.status(201).json({
       status: 'success',
       token,
-      data: user,
+      data: {
+        user,
+        cart,
+      },
     });
   } catch (err) {
     res.status(500).json({ error: err.message });

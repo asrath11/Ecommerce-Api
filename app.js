@@ -2,6 +2,7 @@ const express = require('express');
 const morgan = require('morgan');
 const userRouter = require('./routes/userRoutes');
 const productRouter = require('./routes/productRoutes');
+const cartRouter = require('./routes/cartRoutes');
 const app = express();
 
 app.use(morgan('dev'));
@@ -10,6 +11,7 @@ app.use(express.static(`${__dirname}/public`));
 
 app.use('/ecommerce/api/v1/users', userRouter);
 app.use('/ecommerce/api/v1/products', productRouter);
+app.use('/ecommerce/api/v1/carts', cartRouter);
 
 app.all('*', (req, res, next) => {
   res.status(404).json({
