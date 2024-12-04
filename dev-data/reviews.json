@@ -1,0 +1,122 @@
+[
+  {
+    "content": "Great TV with stunning picture quality and vibrant colors. Worth every penny!",
+    "createdAt": "2024-11-01T10:00:00Z",
+    "product": "674825e50553d0d88472db9b",
+    "user": "674825e00553d0d88472db6e"
+  },
+  {
+    "content": "The sound quality could be better, but overall it's a great buy. Easy to set up.",
+    "createdAt": "2024-11-02T11:30:00Z",
+    "product": "674825e50553d0d88472db9b",
+    "user": "674825e00553d0d88472db70"
+  },
+  {
+    "content": "Very comfortable and lightweight. Perfect for long listening sessions.",
+    "createdAt": "2024-11-03T14:20:00Z",
+    "product": "674825e50553d0d88472db99",
+    "user": "674825e00553d0d88472db71"
+  },
+  {
+    "content": "The headphones are amazing, but they don't last as long on a single charge as I hoped.",
+    "createdAt": "2024-11-04T15:15:00Z",
+    "product": "674825e50553d0d88472db99",
+    "user": "674825e00553d0d88472db72"
+  },
+  {
+    "content": "Works perfectly with my phone. I can track my workouts with ease!",
+    "createdAt": "2024-11-05T16:45:00Z",
+    "product": "674825e50553d0d88472db9a",
+    "user": "674825e00553d0d88472db73"
+  },
+  {
+    "content": "The smartwatch is sleek and stylish, but the battery life is shorter than expected.",
+    "createdAt": "2024-11-06T17:30:00Z",
+    "product": "674825e50553d0d88472db9a",
+    "user": "674825e00553d0d88472db74"
+  },
+  {
+    "content": "Nice bottle, keeps water cool for hours. Very durable and stylish!",
+    "createdAt": "2024-11-07T18:00:00Z",
+    "product": "674825e50553d0d88472db9c",
+    "user": "674825e00553d0d88472db75"
+  },
+  {
+    "content": "I love this water bottle! It's great for the gym and stays leak-proof.",
+    "createdAt": "2024-11-08T19:00:00Z",
+    "product": "674825e50553d0d88472db9c",
+    "user": "674825e00553d0d88472db76"
+  },
+  {
+    "content": "Good value for the price. My productivity has increased with this new mouse.",
+    "createdAt": "2024-11-09T20:30:00Z",
+    "product": "674825e50553d0d88472db9d",
+    "user": "674825e00553d0d88472db77"
+  },
+  {
+    "content": "Solid mouse, precise and comfortable for gaming. Highly recommend it.",
+    "createdAt": "2024-11-10T21:00:00Z",
+    "product": "674825e50553d0d88472db9d",
+    "user": "674825e00553d0d88472db78"
+  },
+  {
+    "content": "The yoga mat is comfortable and provides great grip. Very satisfied with my purchase.",
+    "createdAt": "2024-11-11T22:00:00Z",
+    "product": "674825e50553d0d88472db9e",
+    "user": "674825e00553d0d88472db79"
+  },
+  {
+    "content": "The mat is great for yoga sessions, but it does slip a little on hardwood floors.",
+    "createdAt": "2024-11-12T23:10:00Z",
+    "product": "674825e50553d0d88472db9e",
+    "user": "674825e00553d0d88472db7b"
+  },
+  {
+    "content": "Very nice keyboard with a smooth typing experience. It's a great addition to my workstation.",
+    "createdAt": "2024-11-13T12:45:00Z",
+    "product": "674825e50553d0d88472dba1",
+    "user": "674825e00553d0d88472db7c"
+  },
+  {
+    "content": "The keys feel great, but it could be a bit quieter when typing.",
+    "createdAt": "2024-11-14T13:00:00Z",
+    "product": "674825e50553d0d88472dba1",
+    "user": "674825e00553d0d88472db7d"
+  },
+  {
+    "content": "Works just as expected. Heats up quickly and is easy to clean.",
+    "createdAt": "2024-11-15T14:15:00Z",
+    "product": "674825e50553d0d88472dba2",
+    "user": "674825e00553d0d88472db7e"
+  },
+  {
+    "content": "Good kettle, heats water fast. Looks great on the countertop too.",
+    "createdAt": "2024-11-16T15:30:00Z",
+    "product": "674825e50553d0d88472dba2",
+    "user": "674825e00553d0d88472db7f"
+  },
+  {
+    "content": "Great set of dumbbells! Perfect for my home workout routine.",
+    "createdAt": "2024-11-17T16:00:00Z",
+    "product": "674825e50553d0d88472dba3",
+    "user": "674825e00553d0d88472db80"
+  },
+  {
+    "content": "Sturdy dumbbells with a wide range of weight adjustments. Very happy with them.",
+    "createdAt": "2024-11-18T17:30:00Z",
+    "product": "674825e50553d0d88472dba3",
+    "user": "674825e00553d0d88472db81"
+  },
+  {
+    "content": "The vacuum works well, but it could be a bit more powerful. Still does the job.",
+    "createdAt": "2024-11-19T18:10:00Z",
+    "product": "674825e50553d0d88472dba4",
+    "user": "674825e00553d0d88472db82"
+  },
+  {
+    "content": "This cordless vacuum is amazing. It has great suction and is easy to maneuver.",
+    "createdAt": "2024-11-20T19:00:00Z",
+    "product": "674825e50553d0d88472dba4",
+    "user": "674825e00553d0d88472db83"
+  }
+]

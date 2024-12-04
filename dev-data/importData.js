@@ -2,6 +2,7 @@ const fs = require('fs');
 const mongoose = require('mongoose');
 const User = require('../models/userModel');
 const Product = require('../models/productModel');
+const Review = require('../models/reviewModel');
 
 const connectDb = async function () {
   try {
@@ -14,17 +15,20 @@ const connectDb = async function () {
 
 connectDb();
 const users = JSON.parse(fs.readFileSync(`${__dirname}/users.json`, 'utf8'));
+const reviews = JSON.parse(fs.readFileSync(`${__dirname}/reviews.json`, 'utf8'));
 const products = JSON.parse(
   fs.readFileSync(`${__dirname}/products.json`, 'utf8')
 );
 const importData = async function () {
   await User.create(users, { validateBeforeSave: false });
   await Product.create(products);
+  await Review.create(reviews);
   console.log('Successfully imported');
 };
 const deleteData = async function () {
   await User.deleteMany();
   await Product.deleteMany();
+  await Review.deleteMany();
   console.log('Successfully deleted');
 };
 if (process.argv[2] === '--import') {

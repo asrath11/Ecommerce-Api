@@ -1,10 +1,11 @@
 const Product = require('./../models/productModel');
-// controllers/userController.js
+const AppFeatures = require('./../utilities/appFeatures');
 exports.getAllProducts = async (req, res) => {
   try {
-    // Logic to fetch all users from the database
-    console.log(req.query);
-    const products = await Product.find(); // Assuming you have a User model
+    const features = new AppFeatures(Product.find(), req.query);
+    features.filter().sort().paginate().selectFields();
+
+    const products = await features.query;
     res.status(200).json({
       status: 'success',
       length: products.length,
@@ -23,7 +24,12 @@ exports.getAllProducts = async (req, res) => {
 exports.getProduct = async (req, res, next) => {
   try {
     const { id } = req.params;
-    const product = await Product.findById(id);
+    const product = await Product.findById(id)
+      .populate({
+        path: 'reviews',
+        selectfields: 'content createdAt user',
+      })
+      .select('-product');
     res.status(200).json({
       status: 'success',
       user: product,
